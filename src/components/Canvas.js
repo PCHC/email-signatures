@@ -164,7 +164,7 @@ class App extends Component {
 
   render() {
     const fontSize = 14;
-    const fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+    const fontFamily = 'Helvetica, Arial, sans-serif';
     const padding = 1;
 
     return (
