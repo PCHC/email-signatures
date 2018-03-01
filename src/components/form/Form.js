@@ -10,17 +10,23 @@ class SignatureForm extends Component {
       <div className="form">
         <div className="form-row">
           <div className="form-group col-9">
-            <label htmlFor="name" className="">Your Name</label>
-            <Text name="name" placeholder="Your Name" className="form-control" value={this.props.signature.name} />
+            <label htmlFor="name" className="">Your Name <span className="text-danger">*</span></label>
+            <Text name="name" placeholder="Your Name" className="form-control" value={this.props.signature.name} notBlank={true} />
+              <div className="invalid-tooltip">
+                Name cannot be blank.
+              </div>
           </div>
           <div className="form-group col-3">
-            <label htmlFor="name" className="">Your Credentials (optional)</label>
+            <label htmlFor="name" className="">Your Credentials</label>
             <Text name="credentials" placeholder="Your Credentials" className="form-control" value={this.props.signature.credentials} />
           </div>
         </div>
         <div className="form-group">
-          <label htmlFor="title" className="">Job Title</label>
-          <Text name="title" placeholder="Job Title" className="form-control" value={this.props.signature.title} />
+          <label htmlFor="title" className="">Job Title <span className="text-danger">*</span></label>
+          <Text name="title" placeholder="Job Title" className="form-control" value={this.props.signature.title} notBlank={true} />
+          <div className="invalid-tooltip">
+            Job title cannot be blank.
+          </div>
         </div>
         <div className="form-group">
           <label htmlFor="location" className="">Location</label>
@@ -28,12 +34,15 @@ class SignatureForm extends Component {
         </div>
         <div className="form-row">
           <div className="form-group col-6">
-            <label htmlFor="phone" className="">Work Phone</label>
+            <label htmlFor="phone" className="">Work Phone <span className="text-danger">*</span></label>
             <div className="input-group">
               <div className="input-group-prepend">
                 <div className="input-group-text">207-</div>
               </div>
-              <Text name="phone" placeholder="Work Phone" className="form-control" value={this.props.signature.phone} />
+              <Text name="phone" placeholder="Work Phone" className="form-control" value={this.props.signature.phone} notBlank={true} />
+              <div className="invalid-tooltip">
+                Work phone cannot be blank.
+              </div>
             </div>
           </div>
           <div className="form-group col-4">

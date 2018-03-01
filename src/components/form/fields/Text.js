@@ -8,13 +8,26 @@ class Text extends Component {
     super(props);
 
     this.state = {
-      text: this.props.value
+      text: this.props.value,
+      class: this.props.className,
     }
 
     this.onInputChange = this.onInputChange.bind(this);
   }
 
   onInputChange(e) {
+    if(this.props.notBlank) {
+      if(e.target.value === '') {
+        this.setState({
+          class: `${this.props.className} is-invalid`
+        });
+      } else {
+        this.setState({
+          class: this.props.className
+        });
+      }
+    }
+
     this.setState({
       text: e.target.value
     }, () => {
@@ -33,7 +46,7 @@ class Text extends Component {
         onChange={this.onInputChange}
         name={this.props.name}
         ref="field"
-        className={this.props.className}
+        className={this.state.class}
       />
     )
   }
