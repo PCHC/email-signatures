@@ -54,8 +54,12 @@ class App extends Component {
     });
 
 
-    refs.address.position({
+    refs.location.position({
       y: refs.title.height() + refs.title.y()
+    });
+
+    refs.address.position({
+      y: refs.location.height() + refs.location.y()
     });
 
     // Phone/ext/fax line:
@@ -183,9 +187,10 @@ class App extends Component {
                   y={0}
                 />
                 <Text
-                  text={ this.props.signature.credentials ?
-                    `, ${this.props.signature.credentials}`
-                    : ''
+                  text={
+                    this.props.signature.credentials
+                      ? `, ${this.props.signature.credentials}`
+                      : ''
                   }
                   padding={padding}
                   fontSize={fontSize + 2}
@@ -207,9 +212,38 @@ class App extends Component {
                   y={20}
                 />
               </Group>
+              <Group ref="locationline">
+                <Text
+                  text={
+                    this.props.signature.location.name
+                      ? this.props.signature.location.name
+                      : ''
+                  }
+                  height={
+                    this.props.signature.location.name
+                      ? null
+                      : 0
+                  }
+                  padding={padding}
+                  fontSize={fontSize}
+                  fontFamily={fontFamily}
+                  align="left"
+                  ref="location"
+                  y={40}
+                />
+              </Group>
               <Group ref="addressline">
                 <Text
-                  text={this.props.signature.address}
+                  text={
+                    this.props.signature.location.address
+                      ? this.props.signature.location.address
+                      : ''
+                  }
+                  height={
+                    this.props.signature.location.name
+                      ? null
+                      : 0
+                  }
                   padding={padding}
                   fontSize={fontSize}
                   fontFamily={fontFamily}

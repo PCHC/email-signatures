@@ -24,7 +24,7 @@ class SignatureForm extends Component {
         </div>
         <div className="form-group">
           <label htmlFor="location" className="">Location</label>
-          <Locations className="form-control" value={this.props.signature.address} />
+          <Locations className="form-control" value={this.props.signature.location.key} />
         </div>
         <div className="form-row">
           <div className="form-group col-6">

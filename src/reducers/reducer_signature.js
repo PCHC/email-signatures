@@ -2,7 +2,11 @@ const INITIAL_STATE = {
   name: 'John Doe',
   credentials: 'MD',
   title: 'Physician',
-  address: '103 Maine Avenue, Bangor, Maine 04401',
+  location: {
+    key: 'admin',
+    name: 'PCHC Administration',
+    address: '103 Maine Avenue, Bangor, Maine 04401',
+  },
   phone: '992-9200',
   ext: '1234',
   fax: true,
@@ -19,7 +23,12 @@ export default function(state = INITIAL_STATE, action) {
     case 'UPDATE_LOCATION':
       return {
         ...state,
-        address: action.payload
+        location: {
+          key: action.payload.key,
+          name: action.payload.name,
+          address: action.payload.address,
+        },
+        address: action.payload.address,
       }
     case 'UPDATE_FAX':
       return {

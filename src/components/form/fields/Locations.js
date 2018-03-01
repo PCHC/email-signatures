@@ -7,30 +7,48 @@ class LocationSelect extends Component {
   constructor(props) {
     super(props);
 
+    let location = this.props.locations[this.props.value];
+
     this.state = {
-      address: this.props.value
+      key: location.key,
+      name: location.name,
+      address: location.address,
     }
 
     this.onInputChange = this.onInputChange.bind(this);
   }
 
   onInputChange(e) {
+    let location = {};
+
+    if(e.target.value === '') {
+      location = {
+        key: e.target.value,
+        name: null,
+        address: null,
+      }
+    } else {
+      location = this.props.locations[e.target.value];
+    }
     this.setState({
-      address: e.target.value
+      key: e.target.value,
+      name: location.name,
+      address: location.address,
     }, () => {
-      this.props.updateLocation(this.state.address)
+      this.props.updateLocation(this.state)
     })
   }
 
   render() {
     return(
-      <select value={this.state.address} onChange={this.onInputChange} className={this.props.className}>
+      <select value={this.state.key} onChange={this.onInputChange} className={this.props.className}>
         <option value=''>Select Location:</option>
-        {this.props.locations.map((location) => {
-          return(
-            <option value={location.address} key={location.key}>{location.name}</option>
-          )
-        })}
+          {Object.keys(this.props.locations).map((key) => {
+            const location = this.props.locations[key];
+            return(
+              <option value={key} key={key}>{location.name}</option>
+            )
+          })}
       </select>
     )
   }
