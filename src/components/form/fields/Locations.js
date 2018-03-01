@@ -42,7 +42,7 @@ class LocationSelect extends Component {
   render() {
     return(
       <select value={this.state.key} onChange={this.onInputChange} className={this.props.className}>
-        <option value=''>Select Location:</option>
+        <option value=''>No Location</option>
           {Object.keys(this.props.locations).map((key) => {
             const location = this.props.locations[key];
             return(
