@@ -65,7 +65,7 @@ class App extends Component {
               className="btn btn-outline-secondary btn-sm"
               target="_blank"
               rel="noopener noreferrer">
-                Click here to learn how to edit your email signature.
+                Click here to learn how to edit your email signature in Outlook.
             </a>
           </p>
         </div>
@@ -89,7 +89,7 @@ class App extends Component {
           </div>
           <div className="row">
             <div className="col text-center">
-              <p>Version 1.1.0</p>
+              <p>Version 1.2.0</p>
             </div>
           </div>
         </footer>
