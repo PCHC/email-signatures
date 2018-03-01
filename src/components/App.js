@@ -70,20 +70,27 @@ class App extends Component {
           </p>
         </div>
         <hr />
-        <footer className="row text-muted">
-          <div className="col">
-            <a
-              className="btn btn-link text-muted"
-              href="https://github.com/PCHC/email-signatures/">
-                <FontAwesomeIcon icon={['fab', 'github']} /> See how this was built
-            </a>
+        <footer className="text-muted">
+          <div className="row">
+            <div className="col">
+              <a
+                className="btn btn-link text-muted"
+                href="https://github.com/PCHC/email-signatures/">
+                  <FontAwesomeIcon icon={['fab', 'github']} /> See how this was built
+              </a>
+            </div>
+            <div className="col text-right">
+              <a
+                className="btn btn-link text-muted"
+                href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">
+                  <FontAwesomeIcon icon="envelope" /> Feedback
+              </a>
+            </div>
           </div>
-          <div className="col text-right">
-            <a
-              className="btn btn-link text-muted"
-              href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">
-                <FontAwesomeIcon icon="envelope" /> Feedback
-            </a>
+          <div className="row">
+            <div className="col text-center">
+              <p>Version 1.0.0</p>
+            </div>
           </div>
         </footer>
       </div>

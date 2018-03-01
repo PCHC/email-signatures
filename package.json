@@ -1,7 +1,29 @@
 {
   "name": "email-signature",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Tool to generate consistent employee email signatures.",
   "private": true,
+  "homepage": "https://pchc.github.io/email-signatures/",
+  "author": {
+    "name": "Chris Violette",
+    "email": "cviolette@pchc.com",
+    "url": "https://pixleight.com"
+  },
+  "bugs": {
+    "url" : "https://github.com/PCHC/email-signatures/issues",
+    "email" : "cviolette@pchc.com"
+  },
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/PCHC/email-signatures.git"
+  },
+  "browserslist": [
+    "IE 10",
+    "IE 11",
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
     "@fortawesome/fontawesome-free-brands": "^5.0.7",
@@ -10,6 +32,7 @@
     "bootstrap": "^4.0.0",
     "core.js": "^0.4.2",
     "downloadjs": "^1.4.7",
+    "gh-pages": "^1.1.0",
     "konva": "^1.7.6",
     "object-hash": "^1.2.0",
     "react": "^16.2.0",
@@ -27,6 +50,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build && surge --project ./build --domain pchc20-signature.surge.sh",
     "deploy:development": "npm run build && surge --project ./build --domain pchc20-signature.surge.sh",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
