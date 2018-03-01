@@ -51,7 +51,7 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build && surge --project ./build --domain pchc20-signature.surge.sh",
+    "deploy": "gh-pages -d build",
     "deploy:development": "npm run build && surge --project ./build --domain pchc20-signature.surge.sh",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
