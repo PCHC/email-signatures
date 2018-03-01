@@ -1,6 +1,6 @@
 {
   "name": "email-signature",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Tool to generate consistent employee email signatures.",
   "private": true,
   "homepage": "https://pchc.github.io/email-signatures/",
