@@ -40,6 +40,7 @@ class App extends Component {
             <p>This tool is designed to help you quickly and easily design an email signature to use during our 20th anniversary. Our goal is to maintain a consistent, professional look.</p>
             <p>Fill our the form below to generate an email signature image, and click the download button when finished.</p>
             <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
+            <p className="text-muted font-italic">For best results, use this app with Google Chrome.</p>
         <div className="card">
           <div className="card-body">
             <Form />
@@ -73,7 +74,7 @@ class App extends Component {
           <div className="col">
             <a
               className="btn btn-link text-muted"
-              href="https://www.github.com/pchc/">
+              href="https://github.com/PCHC/email-signatures/">
                 <FontAwesomeIcon icon={['fab', 'github']} /> See how this was built
             </a>
           </div>
