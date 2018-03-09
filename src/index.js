@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 import { HashRouter as Router } from 'react-router-dom';
 import routes from './routes';
 
@@ -25,4 +25,4 @@ ReactDOM.render(
     </Router>
   </Provider>
   , document.getElementById('root'));
-registerServiceWorker();
+//registerServiceWorker();
