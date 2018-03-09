@@ -55,7 +55,7 @@ export default class App extends Component {
           </div>
           <div className="row">
             <div className="col text-center">
-              <p>Version 2.1.0</p>
+              <p>Version 2.2.0</p>
             </div>
           </div>
         </footer>
