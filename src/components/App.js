@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Form from './form/Form';
 
@@ -21,8 +21,14 @@ export default class App extends Component {
         <p>Fill our the form below to generate an email signature image, and click the download button when finished.</p>
         <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
         <p className="text-muted font-italic">For best results, use this app with Google Chrome.</p>
-        <Link to="/">Image</Link>
-        <Link to="/text">Text</Link>
+        <ul className="nav nav-pills mb-3 justify-content-end">
+          <li className="nav-item">
+            <NavLink to="/" exact className="nav-link" activeClassName="active">Image Version</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/text" className="nav-link" activeClassName="active">Text Version</NavLink>
+          </li>
+        </ul>
         <div className="card">
           <div className="card-body">
             <Form />
