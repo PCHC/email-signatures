@@ -18,7 +18,7 @@ export default class App extends Component {
       <div className="container">
         <h1>PCHC 20th Anniversary Email Signature Generator</h1>
         <p>This tool is designed to help you quickly and easily design an email signature to use during our 20th anniversary. Our goal is to maintain a consistent, professional look.</p>
-        <p>Fill our the form below to generate an email signature, then follow the instructions at the bottom of this page.</p>
+        <p>Fill out the form below to generate an email signature, then follow the instructions at the bottom of this page.</p>
         <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
         <p className="text-muted font-italic">For best results, use this app with Google Chrome.</p>
         <ul className="nav nav-pills mb-3 justify-content-end">
