@@ -121,6 +121,7 @@ class OptionText extends Component {
               Step 1
             </h3>
             <p>Copy the signature image and text to paste into your email application:</p>
+            <p className="text-muted"><small>Note: if prompted to allow this webpage to access your clipboard, select <strong>Allow access</strong>.</small></p>
             <a className="btn btn-primary copy-btn mr-2" ref="copy" data-clipboard-target="#sigtext">Copy <FontAwesomeIcon icon="copy" /></a>
             { this.state.copied
               ? <span className="badge badge-success">Copied!</span>
