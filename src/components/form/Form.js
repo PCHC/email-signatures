@@ -19,7 +19,7 @@ class SignatureForm extends Component {
           <div className="form-group col-3">
             <label htmlFor="name" className="">Your Credentials</label>
             <Text name="credentials" placeholder="Your Credentials" className="form-control" value={this.props.signature.credentials} />
-            <small class="form-text text-muted">Optional</small>
+            <small className="form-text text-muted">Optional</small>
           </div>
         </div>
         <div className="form-group">
@@ -32,7 +32,7 @@ class SignatureForm extends Component {
         <div className="form-group">
           <label htmlFor="location" className="">Location</label>
           <Locations className="form-control" value={this.props.signature.location.key} />
-          <small class="form-text text-muted">Optional</small>
+          <small className="form-text text-muted">Optional</small>
         </div>
         <div className="form-row">
           <div className="form-group col-6">
@@ -55,7 +55,7 @@ class SignatureForm extends Component {
               </div>
               <Text name="ext" placeholder="Work Phone Extension" className="form-control" value={this.props.signature.ext} />
             </div>
-            <small class="form-text text-muted">Optional</small>
+            <small className="form-text text-muted">Optional</small>
           </div>
           <div className="form-group col-2">
             <label htmlFor="fax" className="">Include Fax?</label>
@@ -65,7 +65,7 @@ class SignatureForm extends Component {
         <div className="form-group">
           <label htmlFor="cell" className="">Cell Phone</label>
           <Text name="cell" placeholder="Cell Phone" className="form-control" value={this.props.signature.cell} />
-          <small class="form-text text-muted">Optional</small>
+          <small className="form-text text-muted">Optional</small>
         </div>
       </div>
     )
