@@ -62,56 +62,61 @@ class OptionText extends Component {
         <div className="signature--container">
           <div className="row justify-content-center" id="fullsig">
             <div className="signature--text__text" id="sigtext">
-              <p style={{
-                  ...this.textStyle,
-                  fontSize: '16px',
-                  fontWeight: 'bold'
-                }}>
-                  {this.props.signature.name}
-                  {this.props.signature.credentials
-                    ? `, ${this.props.signature.credentials}`
-                    : ''
-                  }
-              </p>
-              <p style={{
-                  ...this.textStyle
-                }}>
-                  {this.props.signature.title}
-              </p>
-              { this.props.signature.location.key &&
-                <p style={{
-                    ...this.textStyle
-                  }}>
-                    {this.props.signature.location.name}<br/>
-                    {this.props.signature.location.address}
-                </p>
-              }
-              <p style={{
-                  ...this.textStyle
-                }}>
-                  {this.props.signature.phone}
-                  {this.props.signature.ext
-                    ? ` ext. ${this.props.signature.ext}`
-                    : ''
-                  }
-                  {this.props.signature.fax
-                    ? ' | Fax: 207-907-7078'
-                    : ''
-                  }
-              </p>
-              <p style={{
-                  ...this.textStyle
-                }}>
-                  {this.props.signature.cell
-                    ? `${this.props.signature.cell} | `
-                    : ''
-                  }
-                  <a href="https://pchc20.com">pchc20.com</a>
-              </p>
-              <p style={{
-                  ...this.textStyle
-                }}>&nbsp;</p>
-              <img src={Logo} alt="PCHC20 Logo" />
+              <table>
+                <tr>
+                  <td>
+                    <img src={Logo} alt="PCHC20 Logo" />
+                  </td>
+                  <td>
+                    <p style={{
+                        ...this.textStyle,
+                        fontSize: '16px',
+                        fontWeight: 'bold'
+                      }}>
+                        {this.props.signature.name}
+                        {this.props.signature.credentials
+                          ? `, ${this.props.signature.credentials}`
+                          : ''
+                        }
+                    </p>
+                    <p style={{
+                        ...this.textStyle
+                      }}>
+                        {this.props.signature.title}
+                    </p>
+                    { this.props.signature.location.key &&
+                      <p style={{
+                          ...this.textStyle
+                        }}>
+                          {this.props.signature.location.name}<br/>
+                          {this.props.signature.location.address}
+                      </p>
+                    }
+                    <p style={{
+                        ...this.textStyle
+                      }}>
+                        {this.props.signature.phone}
+                        {this.props.signature.ext
+                          ? ` ext. ${this.props.signature.ext}`
+                          : ''
+                        }
+                        {this.props.signature.fax
+                          ? ' | Fax: 207-907-7078'
+                          : ''
+                        }
+                    </p>
+                    <p style={{
+                        ...this.textStyle
+                      }}>
+                        {this.props.signature.cell
+                          ? `${this.props.signature.cell} | `
+                          : ''
+                        }
+                        <a href="https://pchc20.com">pchc20.com</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
