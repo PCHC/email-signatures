@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { updateCanvas } from '../actions/index.js';
 import Canvas from './Canvas.js';
 import Download from 'downloadjs';
+
+import Instructions from './Instructions';
 //import Konva from 'konva';
 
 // eslint-disable-next-line
@@ -35,24 +37,31 @@ class OptionImage extends Component {
             <Canvas/>
           </div>
           <p className="text-center">
-            <a href={this.props.canvas.data} download={this.props.canvas.filename} className="btn btn-primary btn-lg download" role="button" onClick={this.handleDownload}>
-                { this.props.canvas.generating ?
-                  <FontAwesomeIcon icon="spinner" spin />
-                :
-                  <span>Download <FontAwesomeIcon icon="download"/></span>
-                }
-            </a>
+
           </p>
-          <p className="text-center">
-            <a
-              href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2#ID0EAACAAA=2016,_2013"
-              className="btn btn-outline-secondary btn-sm"
-              target="_blank"
-              rel="noopener noreferrer">
-                Click here to learn how to edit your email signature in Outlook.
-            </a>
-          </p>
+          <div className="row">
+            <div className="col">
+              <h3>
+                Step 1
+              </h3>
+              <p>Click the button below to download the signature image:</p>
+              <a href={this.props.canvas.data} download={this.props.canvas.filename} className="btn btn-primary btn-lg download" role="button" onClick={this.handleDownload}>
+                  { this.props.canvas.generating ?
+                    <FontAwesomeIcon icon="spinner" spin />
+                  :
+                    <span>Download <FontAwesomeIcon icon="download"/></span>
+                  }
+              </a>
+            </div>
+            <div className="col">
+              <h3>
+                Step 2
+              </h3>
+              <p>Insert the downloaded image into your signature in Outlook, following the instructions below:</p>
+            </div>
+          </div>
         </div>
+        <Instructions type="image" />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 {
   "name": "email-signature",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "Tool to generate consistent employee email signatures.",
   "private": true,
   "author": {

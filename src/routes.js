@@ -6,7 +6,7 @@ import OptionText from './components/OptionText';
 
 export default (
   <Switch>
-    <Route path="/text" component={OptionText} />
-    <Route component={OptionImage} />
+    <Route path="/image" component={OptionImage} />
+    <Route component={OptionText} />
   </Switch>
 );

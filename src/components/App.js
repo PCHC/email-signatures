@@ -23,10 +23,10 @@ export default class App extends Component {
         <p className="text-muted font-italic">For best results, use this app with Google Chrome.</p>
         <ul className="nav nav-pills mb-3 justify-content-end">
           <li className="nav-item">
-            <NavLink to="/" exact className="nav-link" activeClassName="active">Image Version</NavLink>
+            <NavLink to="/text" exact className="nav-link" activeClassName="active">Text Version</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/text" className="nav-link" activeClassName="active">Text Version</NavLink>
+            <NavLink to="/image" exact className="nav-link" activeClassName="active">Image Version</NavLink>
           </li>
         </ul>
         <div className="card">
@@ -55,7 +55,7 @@ export default class App extends Component {
           </div>
           <div className="row">
             <div className="col text-center">
-              <p>Version 2.2.0</p>
+              <p>Version 2.3.0</p>
             </div>
           </div>
         </footer>

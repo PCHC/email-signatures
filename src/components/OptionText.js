@@ -5,6 +5,8 @@ import { updateCanvas } from '../actions/index.js';
 import Download from 'downloadjs';
 import Clipboard from 'clipboard';
 import Logo from '../images/pchc20-logo.png';
+
+import Instructions from './Instructions';
 //import Konva from 'konva';
 
 // eslint-disable-next-line
@@ -63,59 +65,61 @@ class OptionText extends Component {
           <div className="row justify-content-center" id="fullsig">
             <div className="signature--text__text" id="sigtext">
               <table>
-                <tr>
-                  <td>
-                    <img src={Logo} alt="PCHC20 Logo" />
-                  </td>
-                  <td>
-                    <p style={{
-                        ...this.textStyle,
-                        fontSize: '16px',
-                        fontWeight: 'bold'
-                      }}>
-                        {this.props.signature.name}
-                        {this.props.signature.credentials
-                          ? `, ${this.props.signature.credentials}`
-                          : ''
-                        }
-                    </p>
-                    <p style={{
-                        ...this.textStyle
-                      }}>
-                        {this.props.signature.title}
-                    </p>
-                    { this.props.signature.location.key &&
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src={Logo} alt="PCHC20 Logo" />
+                    </td>
+                    <td>
+                      <p style={{
+                          ...this.textStyle,
+                          fontSize: '16px',
+                          fontWeight: 'bold'
+                        }}>
+                          {this.props.signature.name}
+                          {this.props.signature.credentials
+                            ? `, ${this.props.signature.credentials}`
+                            : ''
+                          }
+                      </p>
                       <p style={{
                           ...this.textStyle
                         }}>
-                          {this.props.signature.location.name}<br/>
-                          {this.props.signature.location.address}
+                          {this.props.signature.title}
                       </p>
-                    }
-                    <p style={{
-                        ...this.textStyle
-                      }}>
-                        {this.props.signature.phone}
-                        {this.props.signature.ext
-                          ? ` ext. ${this.props.signature.ext}`
-                          : ''
-                        }
-                        {this.props.signature.fax
-                          ? ' | Fax: 207-907-7078'
-                          : ''
-                        }
-                    </p>
-                    <p style={{
-                        ...this.textStyle
-                      }}>
-                        {this.props.signature.cell
-                          ? `${this.props.signature.cell} | `
-                          : ''
-                        }
-                        <a href="https://pchc20.com">pchc20.com</a>
-                    </p>
-                  </td>
-                </tr>
+                      { this.props.signature.location.key &&
+                        <p style={{
+                            ...this.textStyle
+                          }}>
+                            {this.props.signature.location.name}<br/>
+                            {this.props.signature.location.address}
+                        </p>
+                      }
+                      <p style={{
+                          ...this.textStyle
+                        }}>
+                          {this.props.signature.phone}
+                          {this.props.signature.ext
+                            ? ` ext. ${this.props.signature.ext}`
+                            : ''
+                          }
+                          {this.props.signature.fax
+                            ? ' | Fax: 207-907-7078'
+                            : ''
+                          }
+                      </p>
+                      <p style={{
+                          ...this.textStyle
+                        }}>
+                          {this.props.signature.cell
+                            ? `${this.props.signature.cell} | `
+                            : ''
+                          }
+                          <a href="https://pchc20.com">pchc20.com</a>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -136,18 +140,10 @@ class OptionText extends Component {
             <h3>
               Step 2
             </h3>
-            <p>Paste the copied text and image into your signature in your email application.</p>
+            <p>Paste the copied text and image into your signature in Outlook, following the instructions below:</p>
           </div>
         </div>
-        <p className="text-center mt-3 mb-3">
-          <a
-            href="https://support.office.com/en-us/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2#ID0EAACAAA=2016,_2013"
-            className="btn btn-outline-secondary btn-sm"
-            target="_blank"
-            rel="noopener noreferrer">
-              Click here to learn how to edit your email signature in Outlook.
-          </a>
-        </p>
+        <Instructions type="text" />
       </div>
     );
   }
