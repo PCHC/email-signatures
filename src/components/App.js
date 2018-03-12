@@ -21,14 +21,6 @@ export default class App extends Component {
         <p>Fill out the form below to generate an email signature, then follow the instructions at the bottom of this page.</p>
         <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
         <p className="text-muted font-italic">For best results, use this app with Google Chrome.</p>
-        <ul className="nav nav-pills mb-3 justify-content-end">
-          <li className="nav-item">
-            <NavLink to="/text" exact className="nav-link" activeClassName="active">Text Version</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/image" exact className="nav-link" activeClassName="active">Image Version</NavLink>
-          </li>
-        </ul>
         <div className="card">
           <div className="card-body">
             <Form />
