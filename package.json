@@ -3,6 +3,7 @@
   "version": "2.3.0",
   "description": "Tool to generate consistent employee email signatures.",
   "private": true,
+  "homepage": "https://pchc.github.io/email-signatures/",
   "author": {
     "name": "Chris Violette",
     "email": "cviolette@pchc.com",
