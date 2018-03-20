@@ -98,7 +98,7 @@ class OptionText extends Component {
                       <p style={{
                           ...this.textStyle
                         }}>
-                          {this.props.signature.phone}
+                          207-{this.props.signature.phone}
                           {this.props.signature.ext
                             ? ` ext. ${this.props.signature.ext}`
                             : ''
