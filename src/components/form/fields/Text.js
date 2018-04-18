@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { updateText } from '../../../actions/index.js';
+import { updateForm } from '../../../actions/index.js';
 
 class Text extends Component {
   constructor(props) {
@@ -31,8 +31,8 @@ class Text extends Component {
     this.setState({
       text: e.target.value
     }, () => {
-      this.props.updateText({
-        text: this.state.text,
+      this.props.updateForm({
+        payload: this.state.text,
         name: this.refs.field.name
       });
     });
@@ -53,7 +53,7 @@ class Text extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateText }, dispatch);
+  return bindActionCreators({ updateForm }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(Text);

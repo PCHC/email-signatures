@@ -16,7 +16,7 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
-    case 'UPDATE_TEXT':
+    case 'UPDATE_FORM':
       return {
         ...state,
         [action.name]: action.payload
@@ -30,16 +30,6 @@ export default function(state = INITIAL_STATE, action) {
           address: action.payload.address,
         },
         address: action.payload.address,
-      }
-    case 'UPDATE_FAX':
-      return {
-        ...state,
-        fax: action.payload
-      }
-    case 'UPDATE_PCHCSECURE':
-      return {
-        ...state,
-        pchcsecure: action.payload
       }
     default:
       return state;
