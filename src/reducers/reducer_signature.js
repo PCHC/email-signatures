@@ -9,8 +9,9 @@ const INITIAL_STATE = {
   },
   phone: '992-9200',
   ext: '1234',
-  fax: true,
+  fax: '907-7078',
   cell: '207-867-5309',
+  pchcsecure: true,
 }
 
 export default function(state = INITIAL_STATE, action) {
@@ -34,6 +35,11 @@ export default function(state = INITIAL_STATE, action) {
       return {
         ...state,
         fax: action.payload
+      }
+    case 'UPDATE_PCHCSECURE':
+      return {
+        ...state,
+        pchcsecure: action.payload
       }
     default:
       return state;

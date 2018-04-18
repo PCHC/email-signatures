@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Text from './fields/Text';
 import Fax from './fields/Fax';
+import PchcSecure from './fields/PchcSecure';
 import Locations from './fields/Locations';
 
 class SignatureForm extends Component {
@@ -35,7 +36,7 @@ class SignatureForm extends Component {
           <small className="form-text text-muted">Optional</small>
         </div>
         <div className="form-row">
-          <div className="form-group col-6">
+          <div className="form-group col-4">
             <label htmlFor="phone" className="">Work Phone <span className="text-danger">*</span></label>
             <div className="input-group">
               <div className="input-group-prepend">
@@ -57,15 +58,27 @@ class SignatureForm extends Component {
             </div>
             <small className="form-text text-muted">Optional</small>
           </div>
-          <div className="form-group col-2">
-            <label htmlFor="fax" className="">Include Fax?</label>
-            <Fax name="fax" className="form-control" />
+          <div className="form-group col-4">
+            <label htmlFor="fax" className="">Fax</label>
+            <div className="input-group">
+              <div className="input-group-prepend">
+                <div className="input-group-text">207-</div>
+              </div>
+              <Text name="fax" placeholder="Fax" className="form-control" value={this.props.signature.fax} />
+            </div>
+            <small className="form-text text-muted">Optional</small>
           </div>
         </div>
         <div className="form-group">
           <label htmlFor="cell" className="">Cell Phone</label>
           <Text name="cell" placeholder="Cell Phone" className="form-control" value={this.props.signature.cell} />
           <small className="form-text text-muted">Optional</small>
+        </div>
+        <div className="form-group">
+          <div className="form-check">
+            <PchcSecure name="pchcsecure" className="form-check-input" />
+            <label htmlFor="pchcsecure" className="form-check-label">Include PCHCSECURE?</label>
+          </div>
         </div>
       </div>
     )
