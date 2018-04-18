@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { updateFax } from '../../../actions/index.js';
+import { updateForm } from '../../../actions/index.js';
 
-class Fax extends Component {
+class Checkbox extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      fax: true
+      checked: props.checked
     }
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -16,9 +16,12 @@ class Fax extends Component {
 
   onInputChange(e) {
     this.setState({
-      fax: e.target.checked
+      checked: e.target.checked
     }, () => {
-      this.props.updateFax(this.state.fax);
+      this.props.updateForm({
+        payload: this.state.checked,
+        name: this.refs.field.name
+      });
     });
   }
 
@@ -28,15 +31,17 @@ class Fax extends Component {
         type="checkbox"
         onChange={this.onInputChange}
         name={this.props.name}
+        id={this.props.name}
         className={this.props.className}
-        checked={this.state.fax}
+        checked={this.state.checked}
+        ref="field"
       />
     )
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateFax }, dispatch);
+  return bindActionCreators({ updateForm }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Fax);
+export default connect(null, mapDispatchToProps)(Checkbox);

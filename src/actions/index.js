@@ -1,7 +1,7 @@
-export function updateText(action) {
+export function updateForm(action) {
   return {
-    type: 'UPDATE_TEXT',
-    payload: action.text,
+    type: 'UPDATE_FORM',
+    payload: action.payload,
     name: action.name
   }
 }
@@ -9,20 +9,6 @@ export function updateText(action) {
 export function updateLocation(action) {
   return {
     type: 'UPDATE_LOCATION',
-    payload: action
-  }
-}
-
-export function updateFax(action) {
-  return {
-    type: 'UPDATE_FAX',
-    payload: action
-  }
-}
-
-export function updatePchcSecure(action) {
-  return {
-    type: 'UPDATE_PCHCSECURE',
     payload: action
   }
 }

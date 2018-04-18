@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import Text from './fields/Text';
-import Fax from './fields/Fax';
-import PchcSecure from './fields/PchcSecure';
+import Checkbox from './fields/Checkbox';
 import Locations from './fields/Locations';
 
 class SignatureForm extends Component {
@@ -76,7 +75,7 @@ class SignatureForm extends Component {
         </div>
         <div className="form-group">
           <div className="form-check">
-            <PchcSecure name="pchcsecure" className="form-check-input" />
+            <Checkbox name="pchcsecure" className="form-check-input" checked={this.props.signature.pchcsecure} />
             <label htmlFor="pchcsecure" className="form-check-label">Include PCHCSECURE?</label>
           </div>
         </div>
