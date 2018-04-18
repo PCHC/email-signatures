@@ -104,7 +104,7 @@ class OptionText extends Component {
                             : ''
                           }
                           {this.props.signature.fax
-                            ? ' | Fax: 207-907-7078'
+                            ? ` | Fax: 207-${this.props.signature.fax}`
                             : ''
                           }
                       </p>
@@ -117,6 +117,14 @@ class OptionText extends Component {
                           }
                           <a href="https://pchc20.com">pchc20.com</a>
                       </p>
+                      {this.props.signature.pchcsecure ?
+                        <p style={{
+                            ...this.textStyle,
+                            fontSize: '12px'
+                          }}>
+                            PCHCSECURE
+                        </p>
+                      : null }
                     </td>
                   </tr>
                 </tbody>

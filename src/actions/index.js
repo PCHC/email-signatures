@@ -20,6 +20,13 @@ export function updateFax(action) {
   }
 }
 
+export function updatePchcSecure(action) {
+  return {
+    type: 'UPDATE_PCHCSECURE',
+    payload: action
+  }
+}
+
 export function updateCanvas(action) {
   return {
     type: 'UPDATE_CANVAS',
