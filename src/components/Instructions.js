@@ -46,10 +46,13 @@ export default class Instructions extends Component {
             Fax: (If used)<br />
             PCHC Logo
           </p>
+          <p><strong>Use professional fonts and colors</strong>&nbsp;— Professional fonts include default fonts like Segoue UI, Calibri, Arial, or Helvetica. Font color should be black or dark blue.</p>
+          <p><strong>Don’t use background images or colors in your emails.</strong></p>
           <div className="card bg-light mb-3">
             <div className="card-header">Email Signature Requirements for Providers</div>
             <div className="card-body">
-              <p className="card-text">New law requires that email signatures from providers must include that <strong>provider’s full name, credentials, and common term for their profession</strong>.</p>
+              <p className="card-text">State law requires that email from providers must include that <strong>provider’s full name, credentials, and common term for their profession</strong>.</p>
+              <p className="card-text"><a href="http://www.mainelegislature.org/legis/bills/bills_126th/chapters/PUBLIC285.asp">Read the law here.</a></p>
             </div>
           </div>
           <h3>Email Etiquette</h3>
@@ -58,7 +61,7 @@ export default class Instructions extends Component {
           </p>
           <ul>
             <li><strong>Don’t use background images or colors</strong>&nbsp;— They may look nice to you, but they don’t always look the same to the recipient. Depending on their email program, some formatting may be stripped out, making your email difficult to read against your background. It also adds unnecessary file size to the email. <strong>Always keep your background white.</strong></li>
-            <li><strong>Use professional fonts and colors</strong>&nbsp;— Never use “cute” specialty fonts, such as Comic Sans or Papyrus as your default font, and if you’d like to change your default font color, try to keep it in the PCHC family of colors. Darker colors work best to maintain readability.</li>
+            <li><strong>Use professional fonts and colors</strong>&nbsp;— Professional fonts include default fonts like Segoue UI, Calibri, Arial, or Helvetica. Font color should be black or dark blue. Never use “cute” specialty fonts, such as Comic Sans or Papyrus as your default font, and if you’d like to change your default font color, try to keep it in the PCHC family of colors. Darker colors work best to maintain readability.</li>
             <li><strong>Don’t be sloppy</strong>&nbsp;— Email is a fairly informal means of communication, but should still be treated with more professionalism than mobile texting. Check your grammar,&nbsp;spelling, and punctuation — don’t use abbreviations for common words (such as ‘u’ for ‘you’, or ‘2’ for ‘to&nbsp;or too’), and watch out for commonly mixed up words, such as your &amp; you’re, its &amp; it’s, and there, their, &amp; they’re.</li>
             <li><strong>Keep messages simple</strong>&nbsp;— Try to keep your email to the point, and focus on one subject whenever possible.</li>
             <li><strong>Use sentence case</strong>&nbsp;— USING ALL CAPITAL LETTERS LOOKS AS IF YOU’RE SHOUTING. using all lowercase looks lazy. Use proper capitlization, and use&nbsp;<strong>bold</strong>&nbsp;or&nbsp;<em>italics</em>&nbsp;or *asterisks* for any necessary emphasis. Avoid using different text colors to highlight, however, because not everyone’s email program will display them properly.</li>
