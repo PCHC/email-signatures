@@ -10,6 +10,11 @@ export default function() {
       address: '735 Wilson Street, Brewer, Maine 04412',
       name: 'Brewer Medical Center',
     },
+    'bsbhc': {
+      key: 'bsbhc',
+      address: '92 Pendleton Street, Brewer, Maine 04412',
+      name: 'Brewer School Based Health Center',
+    },
     'cchc': {
       key: 'cchc',
       address: '86 Davis Road, Bangor, Maine 04401',
