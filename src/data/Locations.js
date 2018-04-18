@@ -15,6 +15,11 @@ export default function() {
       address: '86 Davis Road, Bangor, Maine 04401',
       name: 'Capehart Community Health Center',
     },
+    'ccg': {
+      key: 'ccg',
+      address: '992 Union Street, Suite 3, Bangor, Maine 04401',
+      name: 'Community Care & Geriatrics',
+    },
     'dental': {
       key: 'dental',
       address: '1048 Union Street, Bangor, Maine 04401',
@@ -55,11 +60,6 @@ export default function() {
       address: '1068 Union Street, Bangor, Maine 04401',
       name: 'Penobscot Pediatrics',
     },
-    'recref': {
-      key: 'recref',
-      address: '615 Odlin Road, Bangor, Maine 04401',
-      name: 'Records and Referrals',
-    },
     'schc': {
       key: 'schc',
       address: '53 Schoodic Drive, Belfast, Maine 04915',
@@ -74,11 +74,6 @@ export default function() {
       key: 'clubhouse',
       address: '30 Summer Street, Bangor, Maine 04401',
       name: 'Unlimited Solutions Clubhouse',
-    },
-    'warren': {
-      key: 'warren',
-      address: '992 Union Street, Bangor, Maine 04401',
-      name: 'Warren Center for Speech and Hearing',
     },
     'wchc': {
       key: 'wchc',
