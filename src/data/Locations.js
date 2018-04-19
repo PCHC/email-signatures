@@ -40,6 +40,11 @@ export default function() {
       address: '179-181 Corporate Drive, Bangor, Maine 04401',
       name: 'Hope House Health and Living Center',
     },
+    'is': {
+      key: 'is',
+      address: '992 Union Street, Bangor, Maine 04401',
+      name: 'Information Systems',
+    },
     'jchc': {
       key: 'jchc',
       address: '376 Main Street, Jackman, ME 04945',
