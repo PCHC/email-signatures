@@ -95,7 +95,7 @@ class App extends Component {
     setTimeout(() => {
       let dataURL = this.refs.canvas.toDataURL();
       let filehash = hash.sha1(dataURL);
-      let filename = `pchc20-signature_${filehash.substr(0,8)}.png`;
+      let filename = `pchc-signature_${filehash.substr(0,8)}.png`;
 
       this.props.updateCanvas({
         data: dataURL,

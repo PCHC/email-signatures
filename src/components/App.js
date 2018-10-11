@@ -15,10 +15,10 @@ export default class App extends Component {
 
     return (
       <div className="container">
-        <h1>PCHC 20th Anniversary Email Signature Generator</h1>
-        <p>This tool is designed to help you quickly and easily design an email signature to use during our 20th anniversary. Our goal is to maintain a consistent, professional look.</p>
+        <h1>PCHC Email Signature Generator</h1>
+        <p>This tool is designed to help you quickly and easily design an email signature. Our goal is to maintain a consistent, professional look.</p>
         <p>Fill out the form below to generate an email signature, then follow the instructions at the bottom of this page.</p>
-        <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
+        <p>If you have questions or trouble using this tool, email Chris at <a href="mailto:cviolette@pchc.com?subject=PCHC%20Email%20Signature%20Generator%20Feedback">cviolette@pchc.com</a>.</p>
         <div className="card">
           <div className="card-body">
             <Form />
@@ -38,14 +38,14 @@ export default class App extends Component {
             <div className="col text-right">
               <a
                 className="btn btn-link text-muted"
-                href="mailto:cviolette@pchc.com?subject=PCHC20%20Email%20Signature%20Generator%20Feedback">
+                href="mailto:cviolette@pchc.com?subject=PCHC%20Email%20Signature%20Generator%20Feedback">
                   <FontAwesomeIcon icon="envelope" /> Feedback
               </a>
             </div>
           </div>
           <div className="row">
             <div className="col text-center">
-              <p>Version 2.8.3</p>
+              <p>Version 2.9.3</p>
             </div>
           </div>
         </footer>

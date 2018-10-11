@@ -4,7 +4,8 @@ import { bindActionCreators } from 'redux';
 import { updateCanvas } from '../actions/index.js';
 import Download from 'downloadjs';
 import Clipboard from 'clipboard';
-import Logo from '../images/pchc20-logo.png';
+import Logo from '../images/pchc-logo.png';
+import Logo20 from '../images/pchc20-logo.png';
 
 import Instructions from './Instructions';
 //import Konva from 'konva';
@@ -28,6 +29,12 @@ class OptionText extends Component {
       lineHeight: 1.1,
       marginBottom: 0
     };
+
+    if (this.props.pchc20) {
+      this.url = 'pchc20.com'
+    } else {
+      this.url = 'pchc.com'
+    }
 
     const clipboard = new Clipboard('.copy-btn');
 
@@ -68,7 +75,10 @@ class OptionText extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <img src={Logo} alt="PCHC20 Logo" />
+                      <img src={this.props.pchc20
+                          ? Logo20
+                          : Logo
+                        } alt="PCHC Logo" />
                     </td>
                     <td>
                       <p style={{
@@ -115,7 +125,7 @@ class OptionText extends Component {
                             ? `${this.props.signature.cell} | `
                             : ''
                           }
-                          <a href="https://pchc20.com">pchc20.com</a>
+                          <a href={"https://" + this.url}>{this.url}</a>
                       </p>
                       {this.props.signature.pchcsecure ?
                         <p style={{
